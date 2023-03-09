@@ -1,7 +1,11 @@
 <template>
-  <header>
+  <div>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <header>
     <div class="menu-content">
-        <h1 class="logo"><router-link class="router-link" to="/">bem + fit</router-link></h1>
+        <div class="logo"><router-link class="router-link" to="/"><img class="fit" src="../assets/fit.png" alt="">
+        </router-link>
+        </div>
         <nav class="header-menu">
             <ul class="list-itens">
                 <li><router-link class="router-link"  to="/aboutPage">quem somos</router-link></li>
@@ -10,13 +14,32 @@
             </ul>
         </nav>
     </div>
-  </header>
+   </header>
   <main-plan>
     <div class="plans-content">
-      <h1 class="plans-text">confira nossos planos!</h1>
+      <h1 class="plans-text ">confira nossos planos!</h1>
     </div>
-  </main-plan>
 
+  <div class="container text-center">
+  <div class="row align-items-start">
+
+    <div class="col-plans col">
+    <img class="img-plans  " src="../assets/Musculação.png" alt="">
+    </div>
+
+    <div class="col-plans col">
+      <img class="img-plans" src="../assets/Musculação.png" alt="">  
+    </div>
+
+    <div class="col-plans col">
+    <img class="img-plans  " src="../assets/Musculação.png" alt="">      
+    </div>
+
+  </div>
+</div>
+
+  </main-plan>
+</div>
 </template>
 
 <script>
@@ -39,11 +62,21 @@ export default {
   width: 100%;
   justify-content: center ;
   align-items: center;
+  color: yellow;
+}
+.img-plans{
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
 }
 .plans-text{
+  font-size: 2.4rem;
+  color: white;
+  letter-spacing: 1.2rem;
   border-radius: 8px;
   padding: 4px 4px 4px 11px;
-  border: solid white 2px;
 }
 
 header{
@@ -51,6 +84,18 @@ header{
     height: 7vh;
     background-color: rgba(22, 22, 22, 0.5)
 }
+.col-plans {
+  border-radius: 10px;
+  color:yellow
+}
+
+/* estilo ao passar o mouse por cima */
+.col-plans:hover {
+  color: rgb(14, 1, 1);
+  background-color: rgba(252, 235, 4, 0.945);
+}
+
+
 
 
 </style>

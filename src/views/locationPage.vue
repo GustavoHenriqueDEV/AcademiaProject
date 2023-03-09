@@ -1,4 +1,5 @@
 <template>
+  <div>
    <header>
     <div class="menu-content">
         <div class="logo"><router-link class="router-link" to="/"><img class="fit" src="../assets/fit.png" alt="">
@@ -13,8 +14,7 @@
         </nav>
     </div>
    </header>
-  <div class="titulo" ><div class="s">Localização</div></div>
-  <div class="location-content">Venha nos visitar!</div>
+  <div class="location-content h1 text-light">Venha nos visitar!</div>
 
   <main-location>
   <div class="maps" ><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4247.963205050189!2d-48.618362308628555!3d-26.452601053028268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1673916938994!5m2!1spt-BR!2sbr" width="800" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
@@ -29,6 +29,7 @@
   </ul>
 </div>
   </main-location>
+</div>
 </template>
 
 <script>
@@ -38,6 +39,31 @@ export default {
 </script>
 
 <style>
+@media only screen and (max-width: 768px) {
+
+
+ 
+
+  .location-content {
+    font-size: 1.5rem;
+  }
+  .maps {
+    height: 400px;
+  }
+  .location-list {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+  }
+  .li-location {
+    width: 100%;
+  }
+}
+.maps iframe, .location-list iframe {
+    max-width: 100%;
+    height: 60rem;
+  }
+
 .endereço-stilo{
   color: yellow;
   padding-bottom: 30px;
@@ -53,12 +79,13 @@ export default {
   color:yellow
 }
 .location-content{
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1rem;
   margin-top: 10px;
-  letter-spacing: 1rem;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
 

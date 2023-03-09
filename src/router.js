@@ -4,6 +4,7 @@ import aboutPage from '../src/views/aboutPage'
 import contactPage from '../src/views/contactPage'
 import locationPage from '../src/views/locationPage'
 import plansPage from '../src/views/plansPage'
+import makeYourTrain from '../src/views/makeYourTrain'
 
 
 const routes =[
@@ -17,6 +18,12 @@ const routes =[
     path: '/aboutPage',
     name: 'aboutPage',
     component: aboutPage
+    
+},
+{
+    path: '/makeYourTrain',
+    name: 'makeYourTrain',
+    component: makeYourTrain
     
 },
 {

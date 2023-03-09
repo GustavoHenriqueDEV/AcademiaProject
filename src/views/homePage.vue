@@ -1,4 +1,6 @@
 <template>
+    <div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <header>
     <div class="menu-content">
         <div class="logo"><router-link class="router-link" to="/"><img class="fit" src="../assets/fit.png" alt="">
@@ -19,11 +21,11 @@
         <h2 class="second-text">Junte-se a nós, veja os planos!</h2>
     <div class="btn-content">
         <button class="btn-plano" @click="irPlano" >Planos</button>
-        <button class="btn-alg">*****</button>
+        <button class="btn-treino" @click="goMakeTrain" >faça seu treino</button>
     </div>
     </div>
-
    </main>
+</div>
 </template>
 
 <script>
@@ -37,6 +39,9 @@ export default {
     methods:{
         irPlano(){
             router.push({name:'plansPage'})
+        },
+        goMakeTrain(){
+            router.push({name:"makeYourTrain"})
         }
     }
 }
@@ -48,8 +53,16 @@ export default {
 
 
 
+
+main{
+    height: 90vh; /* diminua a altura para que o conteúdo caiba na tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .fit{
-    height: 7vh;
+    max-height: 5vh;
 }
 
 header{
@@ -88,6 +101,7 @@ html {
 }
 
 .list-itens, li {
+    color: white;
     cursor: pointer;
     gap: 40px;
     list-style: none;
@@ -110,7 +124,7 @@ html {
 }
 .logo{
     letter-spacing: 6px;
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     cursor: pointer;
 }
 body{
@@ -120,12 +134,13 @@ body{
     background-position-y: 0px;
     background-repeat: no-repeat;
 }
-/****main*/
+
 main{
-    height: 93vh;
+    height: 90vh; /* diminua a altura para que o conteúdo caiba na tela */
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 .main-content{
     text-transform: uppercase;
@@ -136,10 +151,11 @@ main{
 }
 /**texto conteúdo*/
 .primary-text{
+    color: white;
     margin-bottom: 3rem;
     font-size: 4rem;
     text-align: center;
-    width: 850px;
+    width: 100%;
 }
 .second-text{
     color: rgb(165, 165, 165);
@@ -175,7 +191,6 @@ main{
     background-color: rgba(194, 190, 179, 0.404);
 }
 .btn-content button:hover:before{
-    
     height:  100%;
 }
 
