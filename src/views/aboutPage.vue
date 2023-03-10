@@ -102,7 +102,6 @@ main-teste{
 .container{
     justify-content: center;
     align-items: center;
-    margin-left: 10px;
     margin-top: 100px;
     color: white;
 }
