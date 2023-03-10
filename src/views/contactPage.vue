@@ -15,7 +15,7 @@
     </div>
    </header>
 
-<h1 class="h1 mt-5 text-center text-light" >Visite nossas redes sociais! </h1>
+<h1 class="contact-content mt-5 text-center " >Visite nossas redes sociais! </h1>
 
 
 <div class="container-contact container text-center">
@@ -48,7 +48,20 @@ export default {
 </script>
 
 <style>
-
+.contact-content{
+  color: yellow;
+  border: solid white 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin-top: 10px;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  height: 10rem;
+  
+}
 
 
 .h1{ 
