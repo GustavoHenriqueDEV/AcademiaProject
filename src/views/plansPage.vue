@@ -21,7 +21,7 @@
     </div>
 
   <div class="container text-center">
-  <div class="row align-items-start">
+  <div class="row-plans row align-items-start">
 
     <div class="col-plans col">
     <img class="img-plans  " src="../assets/Musculação.png" alt="">
@@ -50,6 +50,12 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+.row-plans{
+  gap: 1rem;
+}
+
 
 .plans-content{
   margin-top: 100px;
