@@ -25,6 +25,7 @@
       <div>Localização:</div>
       <div>Avenida Jaragua do Sul, 941 -Bal.Barra do sul - SC - 89247-000</div>
     </div>
+
    </section>
   </main>
 </div>
@@ -50,10 +51,17 @@ export default {
     flex-direction: column;
     font-size: 0.1rem;
   }
-  .location-text{
-    font-size: 0.1rem;
-  }
+  .location-text{ 
+  margin-top: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  color: white;
+  font-size:2rem;
 
+}
 
 }
 
@@ -72,7 +80,7 @@ iframe{
   letter-spacing: 1rem;
   text-transform: uppercase;
   color: white;
-  font-size:2.5rem;
+  font-size:2rem;
 
 }
 .location-content{
