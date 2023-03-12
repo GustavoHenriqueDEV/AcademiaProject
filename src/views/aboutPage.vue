@@ -1,5 +1,5 @@
 <template>
-  <div>
+<div class="background">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
       <header>
@@ -16,9 +16,7 @@
         </nav>
     </div>
    </header>
-   <div class="titulo"><div class="about">Sobre nós</div></div>
-   <main-teste>
-    
+   <main>
    <div class="container" >
     <div class="content-about"><h1 class="h1-about">A BEM + FIT</h1></div>
     <p class="content-about2">Fundada em Setembro de 2007, a Stilo Academia desde sua inauguração se preocupa em trazer a saúde e a boa forma aos seus alunos, que contam com todo o suporte de profissionais bem preparados, além de estrutura e aparelhagem completa para o desenvolvimento de diversas práticas esportivas que você pode conferir no menu modalidades.</p>
@@ -33,8 +31,9 @@
     <div class="content-about"><h1 class="h1-about">Métodos</h1></div>
     <p class="content-about2">A Stilo Academia dispõe de uma ampla estrutura com equipamentos modernos e adequados a prática de exercícios físicos, que traz toda sua bagagem em treinamento e infraestrutura de alta qualidade.</p>
    </div>
-    </main-teste>
-  </div>
+    </main>
+</div>
+
 </template>
 
 <script>
@@ -43,67 +42,52 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
-main-teste{
-    display: flex;
+
+/* Estilos padrão para desktops e tablets */
+.container {
+  margin-top: 100px;
+  color: white;
 }
 
-@media only screen and (max-width: 768px) {
-  header {
-    height: auto;
-    padding: 10px;
-  }
-  .menu-content {
-    flex-direction: column;
-    align-items: center;
-  }
-  .logo {
-    margin: 0;
-    margin-bottom: 10px;
-  }
-  .header-menu {
-    position: static;
-    max-height: none;
-    overflow: visible;
-    display: none;
-    width: 100%;
-    background-color: #222;
-  }
-  .list-itens {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-  }
-  .router-link {
-    display: block;
-    padding: 10px;
-    margin: 0;
-    width: 100%;
-    text-align: center;
-  }
-  .router-link:hover {
-    background-color: #111;
-  }
-  .menu-toggle {
-    display: block;
-  }
-}
-
-.content-about2{
+.content-about2 {
   font-size: 1.4rem;
+  line-height: 1.5;
 }
 
-.h1-about{
-    text-decoration: underline 0.1rem; ;
-    font-size: 4rem;
+.h1-about {
+  text-decoration: underline 0.1rem;
+  font-size: 4rem;
 }
-.container{
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-    color: white;
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 600px) {
+  .titulo {
+    margin-top: 20px;
+  }
+
+  .h1-about {
+    font-size: 2rem;
+  }
+
+  .content-about2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    margin-top: 50px;
+  }
+ 
+}
+.background{
+  background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)),url(../assets/academiaWallapaper.jpg);
+  background-position: center, center ;
+  background-size: cover;
+  background-position-y: auto;
+  background-repeat: no-repeat; 
 }
 
 </style>

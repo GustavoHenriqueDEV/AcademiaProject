@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="background">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <header>
     <div class="menu-content">
@@ -47,92 +47,41 @@ export default {
 }
 </script>
 
-<style >
+<style scoped >
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@media screen and (max-width: 600px) {
+    .main-content {
+      padding: 0 10px;
+      text-align: center;
+    }
 
+    .primary-text {
+      font-size: 28px;
+    }
 
+    .second-text {
+      font-size: 24px;
+    }
 
+    .btn-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
+    .btn-plano,
+    .btn-treino {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+.background{
+  background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)),url(../assets/academiaWallapaper.jpg);
+  background-position: center, center ;
+  background-size: cover;
+  background-position-y: auto;
+  background-repeat: no-repeat; 
 
-main{
-    height: 90vh; /* diminua a altura para que o conteúdo caiba na tela */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.fit{
-    max-height: 5vh;
-}
-
-header{
-    width: 100%;
-    height: 7vh;
-    background-color: rgba(22, 22, 22, 0.5)
-}
-.router-link{
-    cursor: pointer;
-    letter-spacing: 4px;
-    color: inherit;
-    text-decoration: none;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    width: 100vw;
-    height: 100vh;
-    font-size: 62.5%;
-    color: white;
-    font-family: 'Lato', sans-serif;
-}
-
-.menu-content{
-    height: 100%;
-    align-items: center;
-    text-transform: uppercase;
-    justify-content: space-around;
-    display: flex;
-    font-size: 1.8rem;
-}
-
-.list-itens, li {
-    color: white;
-    cursor: pointer;
-    gap: 40px;
-    list-style: none;
-    display: flex;
-    transform: 2ms ease-in;
-    position: relative;
-}
-.list-itens li:before{
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 0px;
-    height: 1px;
-    background-color: yellow;
-    transition: all 1.5s ease;
-}
-.list-itens li:hover:before{
-    width: 100%;
-}
-.logo{
-    letter-spacing: 6px;
-    font-size: 2.4rem;
-    cursor: pointer;
-}
-body{
-    background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)),url(../assets/academiaWallapaper.jpg);
-    background-position: center, center ;
-    background-size: cover;
-    background-position-y: 0px;
-    background-repeat: no-repeat;
 }
 
 main{
@@ -193,7 +142,5 @@ main{
 .btn-content button:hover:before{
     height:  100%;
 }
-
-
 
 </style>

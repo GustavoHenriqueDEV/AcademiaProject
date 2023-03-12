@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="background">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <header>
     <div class="menu-content">
@@ -15,12 +15,12 @@
         </nav>
     </div>
    </header>
-  <main-plan>
+  <main>
     <div class="plans-content">
-      <h1 class="plans-text ">confira nossos planos!</h1>
+      <h1 class="plans-text">confira nossos planos!</h1>
     </div>
 
-  <div class="container text-center">
+  <div class="container-plans container text-center">
   <div class="row-plans row align-items-start">
 
     <div class="col-plans col">
@@ -34,11 +34,9 @@
     <div class="col-plans col">
     <img class="img-plans  " src="../assets/Musculação.png" alt="">      
     </div>
-
   </div>
 </div>
-
-  </main-plan>
+</main>
 </div>
 </template>
 
@@ -48,14 +46,45 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 
+@media screen and (max-width: 600px){
+  .plans-content{
+    padding: 0 10px;
+    text-align: center;
+  }
+  .row-plans{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30rem;
+  }
+  .container-plans{
+    display: flex;
+    flex-direction: row;
+  }  
+
+
+}
+
+.background{
+  background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)),url(../assets/academiaWallapaper.jpg);
+  background-position: center, center ;
+  background-size: cover;
+  background-position-y: auto;
+  background-repeat: no-repeat; 
+
+}
+.container-plans{
+  margin-top: 100px;
+  align-content: center;
+  justify-content: center;
+}
 .row-plans{
   gap: 1rem;
 }
-
 
 .plans-content{
   margin-top: 100px;
@@ -85,22 +114,15 @@ export default {
   padding: 4px 4px 4px 11px;
 }
 
-header{
-    width: 100%;
-    height: 7vh;
-    background-color: rgba(22, 22, 22, 0.5)
-}
 .col-plans {
   border-radius: 10px;
-  color:yellow
+  color:yellow;
 }
-
 /* estilo ao passar o mouse por cima */
 .col-plans:hover {
   color: rgb(14, 1, 1);
   background-color: rgba(252, 235, 4, 0.945);
 }
-
 
 
 

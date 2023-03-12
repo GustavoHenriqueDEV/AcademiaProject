@@ -1,5 +1,5 @@
 <template>
-  <div>
+<div class="background">
 <header>
     <div class="menu-content">
         <div class="logo"><router-link class="router-link" to="/"><img class="fit" src="../assets/fit.png" alt="">
@@ -14,9 +14,7 @@
         </nav>
     </div>
    </header>
-
 <h1 class="contact-content mt-5 text-center " >Visite nossas redes sociais! </h1>
-
 
 <div class="container-contact container text-center">
   <div class="row-contact row  align-items-center">
@@ -48,15 +46,23 @@ export default {
 </script>
 
 <style>
+@media screen and (max-width: 600px){
+  .row-contact{
+    display: flex;
+    flex-direction: column;
+    padding:1rem;
+  }
+  svg{
+    margin-bottom: 15rem;
+  }
+
+}
 
 .row-contact{
   gap:2rem   ;
 }
-
-
 .contact-content{
-  color: yellow;
-  border: solid white 1px;
+  color: white;
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -68,13 +74,19 @@ export default {
   height: 10rem;
   
 }
+.background{
+  background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)),url(../assets/academiaWallapaper.jpg);
+  background-position: center, center ;
+  background-size: cover;
+  background-position-y: auto;
+  background-repeat: no-repeat; 
 
+}
 
 .h1{ 
     margin-top: 10px;
     text-transform: uppercase;
 }
-
 
 .container-contact{
     justify-content: center;
@@ -83,6 +95,7 @@ export default {
     color: white;
 }
 .col{
+  border-radius: 10px;
     border: solid 0.1px white;
     align-items: center;
     justify-content: center;
@@ -104,7 +117,5 @@ svg{
   color: rgb(14, 1, 1);
   background-color: rgba(252, 252, 252, 0.432);
 }
-
-
 
 </style>
