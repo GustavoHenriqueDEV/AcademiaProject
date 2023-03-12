@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @media screen and (max-width: 600px){
   .row-contact{
     display: flex;

@@ -1,5 +1,18 @@
 <template>
-  <div></div>
+  <header>
+    <div class="menu-content">
+        <div class="logo"><router-link class="router-link" to="/"><img class="fit" src="../assets/fit.png" alt="">
+        </router-link>
+        </div>
+        <nav class="header-menu">
+            <ul class="list-itens">
+                <li><router-link class="router-link"  to="/aboutPage">quem somos</router-link></li>
+                <li><router-link class="router-link" to="/contactPage">Contato</router-link></li>
+                <li><router-link class="router-link" to="/locationPage">Localização</router-link></li>
+            </ul>
+        </nav>
+    </div>
+   </header>
 </template>
 <script>
 export default {
@@ -9,6 +22,7 @@ export default {
 <style>
 /**Aqui está todo o css relacionado ao header e app-bar */
 @media only screen and (max-width: 768px) {
+  /** 
   header {
     height: auto;
     padding: 10px;
@@ -18,7 +32,6 @@ export default {
     align-items: center;
   }
   .logo {
-    margin: 0;
     margin-bottom: 10px;
   }
   .header-menu {
@@ -48,6 +61,47 @@ export default {
     display: block;
   }
 }
+*/
+.list-itens{
+  margin: 0;
+  font-size: 6px;
+}
+.logo{
+  margin-left: 21px;
+  margin-bottom: 10px;
+}
+.header-menu{
+  width: 100%;
+}
+.router-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -72,8 +126,6 @@ header{
     color: inherit;
     text-decoration: none;
 }
-
-
 
 .menu-content{
     height: 100%;

@@ -21,7 +21,7 @@
         <h2 class="second-text">Junte-se a nós, veja os planos!</h2>
     <div class="btn-content">
         <button class="btn-plano" @click="irPlano" >Planos</button>
-        <button class="btn-treino" @click="goMakeTrain" >faça seu treino</button>
+        <button class="btn-treino" @click="goMakeTrain" ><div class="btn-text">faça seu treino</div></button>
     </div>
     </div>
    </main>
@@ -141,6 +141,9 @@ main{
 }
 .btn-content button:hover:before{
     height:  100%;
+}
+.btn-text{
+    margin-left: 4px;
 }
 
 </style>
