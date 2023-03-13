@@ -178,6 +178,9 @@ textarea{
   width: 100%;
   height: 100%;
 }
+.textarea-content{
+  font-size: 1rem;
+}
 
 }
 
@@ -216,6 +219,7 @@ textarea{
   margin-top: 15px;
   width: 100%;
   resize:none;
+  font-size: 2rem;
 
 }
 .btn-make:hover {
