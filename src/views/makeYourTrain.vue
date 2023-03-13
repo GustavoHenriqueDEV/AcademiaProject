@@ -82,7 +82,7 @@ export default {
     frase: "",
     inputQuestion: this.frase,
     result: "",
-    openaiApiKey: "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"
+    openaiApiKey: "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"
     }
     
   },
