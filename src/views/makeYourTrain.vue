@@ -219,7 +219,6 @@ textarea{
   margin-top: 15px;
   width: 100%;
   resize:none;
-  font-size: 2rem;
 
 }
 .btn-make:hover {
@@ -238,7 +237,7 @@ textarea {
   background-color: #3c3d46;
   color: white;
   outline: none;
-  font-size: 24px;
+  font-size: 50Px;
   text-align: justify;
 }
 .btn-make {
