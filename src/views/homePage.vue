@@ -66,7 +66,7 @@ export default {
       font-size: 24px;
     }
 
-    .btn-content {
+    .btn-content1 {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -116,7 +116,10 @@ main{
 }
 
 /**botões */
-
+.btn-content1{
+    gap: 20px ;
+    display: flex;
+}
 .btn-content1 button{
     color: white;
     text-transform: uppercase;
@@ -139,7 +142,7 @@ main{
     height: 0px;
     background-color: rgba(194, 190, 179, 0.404);
 }
-.btn-content button:hover:before{
+.btn-content1 button:hover:before{
     height:  100%;
 }
 .btn-text{
