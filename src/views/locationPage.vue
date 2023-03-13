@@ -1,5 +1,5 @@
 <template>
-  <div class="background">
+  <div class="">
    <header>
     <div class="menu-content">
         <div class="logo"><router-link class="router-link" to="/"><img class="fit" src="../assets/fit.png" alt="">
@@ -38,13 +38,15 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 
 @media screen and (max-width: 600px) {
 
   iframe{
     margin-top: 4vh;
     border-radius: 20px;
+    display: flex;
+    width: 50px;
   }
   .location-content{
     display: flex;

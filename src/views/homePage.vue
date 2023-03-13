@@ -15,11 +15,13 @@
         </nav>
     </div>
    </header>
+
    <main>
+
     <div class="main-content" >
         <h1 class="primary-text">O peso não ficou mais leve, você ficou mais forte!</h1>
         <h2 class="second-text">Junte-se a nós, veja os planos!</h2>
-    <div class="btn-content">
+    <div class="btn-content1">
         <button class="btn-plano" @click="irPlano" >Planos</button>
         <button class="btn-treino" @click="goMakeTrain" ><div class="btn-text">faça seu treino</div></button>
     </div>
@@ -49,6 +51,7 @@ export default {
 
 <style scoped >
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 @media screen and (max-width: 600px) {
     .main-content {
       padding: 0 10px;
@@ -113,11 +116,8 @@ main{
 }
 
 /**botões */
-.btn-content{
-    gap: 20px ;
-    display: flex;
-}
-.btn-content button{
+
+.btn-content1 button{
     color: white;
     text-transform: uppercase;
     border: 1px solid white;
@@ -129,7 +129,7 @@ main{
     border-radius: 20px;
     letter-spacing: 1.1rem;
 }
-.btn-content button:before{
+.btn-content1 button:before{
     border-radius: 20px;
     content: '';
     position: absolute ;

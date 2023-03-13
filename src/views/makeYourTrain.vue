@@ -1,4 +1,6 @@
 <template>
+  <div class="background">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <header>
     <div class="menu-content">
         <div class="logo"><router-link class="router-link" to="/"><img class="fit" src="../assets/fit.png" alt="">
@@ -13,55 +15,276 @@
         </nav>
     </div>
    </header>
+<main>
+  <div class="content-makeTrain">
+    <h1 class="a">Prepare seu treino!</h1>
+  </div>
+  <hr >
+
+
+
+<div class="d-flex gap-2">
+<select v-model="objetivo" class="form-select" aria-label="Default select example">
+  <option selected>Objetivo</option>
+  <option value="Ganho de massa">Ganho de massa</option>
+  <option value="Perder peso">Perder peso</option>
+  <option value="Elasticidade">Elasticidade</option>
+
+</select>
+<select v-model="dia" class="form-select " aria-label="Default select example" > 
+  <option selected>Dias de treino</option>
+  <option value="3 dias por semana">3 dias por semana</option>
+  <option value="6 dias por semana">6 dias por semana</option>
+  <option value="7 dias por semana">7 dias por semana</option>
+  
+</select>
+<select v-model="peso" class="form-select" aria-label="Default select example">
+  <option selected>Peso</option>
+  <option value="30kg - 40kg">30kg - 40kg</option>
+  <option value="40kg - 50kg">40kg - 50kg</option>
+  <option value="50kg - 60kg">50kg - 60kg</option>
+  <option value="60kg - 70kg">60kg - 70kg</option>
+  <option value="60kg - 80kg">60kg - 80kg</option>
+  <option value="80kg - 100kg">80kg - 100kg</option>
+</select>
+
+<select v-model="altura" class="form-select" aria-label="Default select example">
+  <option selected>Altura</option>
+  <option value="1,50 - 1,60">1,50 - 1,60</option>
+  <option value="1,60 - 1,70">1,60 - 1,70</option>
+  <option value="1,70 - 1,80">1,70 - 1,80</option>
+  <option value="1,80 - 1,90">1,80 - 1,90</option>  
+</select>
+
+</div>
+
+
+<div class="btn-content">
+<button @click="fazerTreino" class="btn-make">PREPARAR TREINO</button> 
+
+</div>
+
+<div class="textarea-content" >
+<textarea v-model="result" readonly style="resize: none"></textarea>
+</div>
+
+</main>
+</div>
 </template>
 <script>
 export default {
+  data() {
+    return {
+    objetivo:"",
+    dia : "",
+    peso: "",
+    altura: "",  
+    frase: "",
+    inputQuestion: this.frase,
+    result: "",
+    openaiApiKey: "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"
+    }
+    
+  },
+  /**@keypress.enter="sendQuestion" */
+  methods: {
+    sendQuestion() {
+      const sQuestion = this.frase.trim();
+      if (!sQuestion) {
+        return;
+      }
 
+      const url = "https://api.openai.com/v1/completions";
+      const payload = {
+        model: "text-davinci-003",
+        prompt: sQuestion,
+        max_tokens: 2048,
+        temperature: 0.5
+      };
+      const headers = {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + this.openaiApiKey
+      };
+
+      fetch(url, {
+        method: "POST",
+        headers,
+        body: JSON.stringify(payload)
+      })
+        .then(response => response.json())
+        .then(json => {
+          const text = json.choices?.[0]?.text || "Sem resposta";
+          this.result += `Chat GPT: ${text}\n`;
+        })
+        .catch(error => {
+          this.result += `Error: ${error.message}\n`;
+        })
+        .finally(() => {
+          this.inputQuestion = "";
+        });
+
+      this.result += `Eu: ${sQuestion}\n`;
+
+    },
+   /**Método para gerar a frase de pesquisa*/
+
+   gerarFrase(){
+    this.frase =  "Faça um treino para a academia com o objetivo de" + " " + this.objetivo + " " + "treinando apenas" + " " + this.dia + " " + "com uma altura de"+ " " + this.altura + " " + "pesando" + " " + this.peso
+    console.log(this.frase)
+
+},
+  fazerTreino(){
+    this.gerarFrase(),
+    this.sendQuestion()
+  }
+
+  },
+ 
+
+  
 }
 </script>
+
+
 <style>
-/**Aqui está todo o css relacionado ao header e app-bar */
-@media only screen and (max-width: 768px) {
-  /** 
-  header {
-    height: auto;
-    padding: 10px;
+
+
+
+
+@media screen and (max-width: 600px){
+  .a{
+    margin-top: 15px;
+    font-size: 1.2rem;
   }
-  .menu-content {
-    flex-direction: column;
-    align-items: center;
+  .btn-content{
+    width: 60%;
+    margin-left: 70px;
   }
-  .logo {
-    margin-bottom: 10px;
+  .btn-make{
+    width: 50%;
   }
-  .header-menu {
-    position: static;
-    max-height: none;
-    overflow: visible;
-    display: none;
-    width: 100%;
-    background-color: #222;
-  }
-  .list-itens {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-  }
-  .router-link {
-    display: block;
-    padding: 10px;
-    margin: 0;
-    width: 100%;
-    text-align: center;
-  }
-  .router-link:hover {
-    background-color: #111;
-  }
-  .menu-toggle {
-    display: block;
-  }
+
+  select.form-select {
+  font-size: 1rem; 
 }
-*/
+select.form-select{
+  font-size: 1rem; 
+
+  margin: 0 10px;
+  height: 30px;
+}    
+textarea{
+  width: 100%;
+  height: 100%;
+}
+
+}
+
+
+.btn-content{
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+
+.background{
+  background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)),url(../assets/academiaWallapaper.jpg);
+  background-position: center, center ;
+  background-size: cover;
+  background-position-y: auto;
+  background-repeat: no-repeat; 
+}
+
+.a{
+  text-transform: uppercase;
+  letter-spacing: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 5rem;
+}
+
+
+.textarea-content{
+  display: flex;
+  justify-content: center;
+  height: 70vh;
+  margin-top: 15px;
+  width: 100%;
+  resize:none;
+
+}
+.btn-make:hover {
+  background-color: #83888d; /* altere a cor de fundo para a cor desejada */
+  border-color: #a1b3c7; /* altere a cor da borda para a cor desejada */
+  color: #fff; /* altere a cor do texto para a cor desejada */
+}
+
+textarea {
+  border-radius: 10px;
+  height: 70%;
+  width: 70%;
+  resize:none;
+  border: none;
+  padding: 8px;
+  background-color: #3c3d46;
+  color: white;
+  outline: none;
+  font-size: 24px;
+  text-align: justify;
+}
+.btn-make {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 20px;
+  border:solid orange 1px;
+  background-color: transparent;
+  width: 50rem;
+  height: 50px;
+  letter-spacing: 1rem;
+  font-size: 1.2rem;
+  color: white;
+
+}
+.img{
+  width: 5%;
+}
+
+select.form-select {
+  font-size: 1.55rem; 
+}
+.form-select{
+  margin: 0 10px;
+  height: 60px;
+}
+
+.content-makeTrain{
+  text-transform: uppercase;
+  font-size: 4rem;
+  letter-spacing: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+/**Aqui está todo o css relacionado ao header e app-bar*/
+@media only screen and (max-width: 768px) {
+  
 .list-itens{
   margin: 0;
   font-size: 6px;
@@ -80,27 +303,6 @@ export default {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 * {
     margin: 0;

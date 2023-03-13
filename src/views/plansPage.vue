@@ -69,6 +69,11 @@ export default {
 
 }
 
+
+.img-plans{
+  border-radius: 20px;
+}
+
 .background{
   background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)),url(../assets/academiaWallapaper.jpg);
   background-position: center, center ;
