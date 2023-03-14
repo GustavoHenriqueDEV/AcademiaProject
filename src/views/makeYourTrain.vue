@@ -23,7 +23,8 @@
 
 
 
-<div class="d-flex gap-2">
+<div class="Select-container">
+<div class="theme">Objetivo:</div>
 <select v-model="objetivo" class="form-select" aria-label="Default select example">
   <option selected>Objetivo</option>
   <option value="Ganho de massa">Ganho de massa</option>
@@ -31,6 +32,7 @@
   <option value="Elasticidade">Elasticidade</option>
 
 </select>
+<div class="theme">D/treino:</div>
 <select v-model="dia" class="form-select " aria-label="Default select example" > 
   <option selected>Dias de treino</option>
   <option value="3 dias por semana">3 dias por semana</option>
@@ -38,6 +40,8 @@
   <option value="7 dias por semana">7 dias por semana</option>
   
 </select>
+<div class="theme" >Peso:</div>
+
 <select v-model="peso" class="form-select" aria-label="Default select example">
   <option selected>Peso</option>
   <option value="30kg - 40kg">30kg - 40kg</option>
@@ -47,7 +51,7 @@
   <option value="60kg - 80kg">60kg - 80kg</option>
   <option value="80kg - 100kg">80kg - 100kg</option>
 </select>
-
+<div class="theme">Altura:</div>
 <select v-model="altura" class="form-select" aria-label="Default select example">
   <option selected>Altura</option>
   <option value="1,50 - 1,60">1,50 - 1,60</option>
@@ -143,8 +147,6 @@ export default {
 }
 </script>
 <style>
-
-
 @media screen and (max-width: 600px){
   .a{
     margin-top: 15px;
@@ -163,9 +165,10 @@ export default {
 }
 select.form-select{
   font-size: 1rem; 
-
   margin: 0 10px;
   height: 30px;
+  width: 30rem;
+  margin-left: 40px;
 }    
 textarea{
   width: 100%;
@@ -175,6 +178,30 @@ textarea{
   font-size: 0.7rem;
 }
 
+.Select-container {
+  display: flex;
+  flex-direction: column;
+}
+.theme{
+  margin-left: 150px;
+}
+}
+
+
+
+
+.Select-container{
+  display: flex;
+}
+
+
+.theme{
+  padding:0 5px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color:rgba(225, 223, 233, 0.904);
+  font-size: 1.6rem;
+  margin-top: 10px;
 }
 
 
@@ -256,7 +283,7 @@ select.form-select {
 }
 .form-select{
   margin: 0 10px;
-  height: 60px;
+  height: 40px;
 }
 
 .content-makeTrain{
