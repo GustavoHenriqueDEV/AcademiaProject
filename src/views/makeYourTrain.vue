@@ -81,7 +81,7 @@ export default {
     altura: "",  
     frase: "",
     inputQuestion: this.frase,
-    result: "ADADADADAADADADADAD",
+    result: "",
     openaiApiKey: ""
     }
     
@@ -172,7 +172,7 @@ textarea{
   height: 100%;
 }
 .textarea-content textarea{
-  font-size: 0.6rem;
+  font-size: 0.7rem;
 }
 
 }

@@ -19,6 +19,8 @@
 
   <div class="container-iframe">
     <iframe src="https://www.google.com/maps/embed?pb=!4v1673969139685!6m8!1m7!1s8xbR638SHH19pCiOsaXQQA!2m2!1d-26.45186504002438!2d-48.61960932334976!3f196.1789840844788!4f10.083361774138694!5f0.7820865974627469" width="600" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div>
+  </div>
   </div> 
 
   <hr>
@@ -34,12 +36,21 @@
 <script>
 
 export default {
+  data() {
+    return {
+      
+    }
+    
+  },
+  mounted() {
+    
+  },
+ 
 }
 </script>
 <style scoped>
 
 @media screen and (max-width: 600px) {
-
   .container-iframe iframe {
     width: 95%;
   }
@@ -97,6 +108,7 @@ hr{
 }
 .container-iframe{
   display: flex;
+  flex: ;
   justify-content: center;
   align-items: center;
 }
