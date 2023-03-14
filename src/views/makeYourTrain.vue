@@ -81,8 +81,8 @@ export default {
     altura: "",  
     frase: "",
     inputQuestion: this.frase,
-    result: "",
-    openaiApiKey: "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"
+    result: "ADADADADAADADADADAD",
+    openaiApiKey: ""
     }
     
   },
@@ -138,18 +138,11 @@ export default {
     this.gerarFrase(),
     this.sendQuestion()
   }
-
   },
- 
 
-  
 }
 </script>
-
-
 <style>
-
-
 
 
 @media screen and (max-width: 600px){
@@ -178,8 +171,8 @@ textarea{
   width: 100%;
   height: 100%;
 }
-.textarea-content{
-  font-size: 1rem;
+.textarea-content textarea{
+  font-size: 0.6rem;
 }
 
 }
