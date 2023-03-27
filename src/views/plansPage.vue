@@ -24,15 +24,15 @@
   <div class="row-plans row align-items-start">
 
     <div class="col-plans col">
-    <img class="img-plans  " src="../assets/Musculação.png" alt="">
+    <img class="img-plans  " src="../assets/preçoAtualizado.png" alt="">
     </div>
 
     <div class="col-plans col">
-      <img class="img-plans" src="../assets/Musculação.png" alt="">  
+      <img class="img-plans" src="../assets/3xSemana.png" alt="">  
     </div>
 
     <div class="col-plans col">
-    <img class="img-plans  " src="../assets/Musculação.png" alt="">      
+    <img class="img-plans  " src="../assets/PlanoFamilia.png" alt="">      
     </div>
   </div>
 </div>
