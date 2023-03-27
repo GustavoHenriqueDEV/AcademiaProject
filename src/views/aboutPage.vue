@@ -19,17 +19,23 @@
    <main>
    <div class="container" >
     <div class="content-about"><h1 class="h1-about">A BEM + FIT</h1></div>
-    <p class="content-about2">Fundada em Setembro de 2007, a Stilo Academia desde sua inauguração se preocupa em trazer a saúde e a boa forma aos seus alunos, que contam com todo o suporte de profissionais bem preparados, além de estrutura e aparelhagem completa para o desenvolvimento de diversas práticas esportivas que você pode conferir no menu modalidades.</p>
-    <p class="content-about2">A academia conta com profissionais qualificados como: nutricionistas, fisioterapeutas e professores de educação física, aptos a atenderem pessoas de todas as idades que queiram praticar atividades físicas, tanto para fins estéticos, terapêuticos ou capacitadores.</p>
-    <p class="content-about2">A Stilo Academia dispõe de uma ampla estrutura com equipamentos modernos e adequados a prática de exercícios físicos, que traz toda sua bagagem em treinamento e infraestrutura de alta qualidade.</p>
+    <p class="content-about2">Bem-vindo(a) à Bem + Fit, uma academia que tem como objetivo promover a saúde e o bem-estar dos nossos alunos, através de um ambiente acolhedor e equipamentos modernos.
+
+Nós acreditamos que praticar exercícios físicos é fundamental para ter uma vida saudável e equilibrada, e por isso oferecemos uma variedade de opções de treinamento, para que cada aluno possa encontrar a atividade que mais lhe agrada e se adapta às suas necessidades.
+
+Com uma equipe de profissionais capacitados e experientes, estamos sempre prontos para oferecer o melhor atendimento e suporte aos nossos alunos, desde a orientação para a realização correta dos exercícios até o planejamento de treinos personalizados.
+
+Além disso, na Bem + Fit valorizamos a importância do ambiente e do convívio social para a motivação e o sucesso nos treinos, por isso criamos um espaço aconchegante e com uma atmosfera de cooperação e amizade, onde nossos alunos se sentem motivados a alcançar seus objetivos.
+
+Acreditamos que todos podem ser bem mais felizes e saudáveis, e é por isso que a Bem + Fit está aqui, para te ajudar a conquistar o seu melhor eu. Venha nos conhecer e fazer parte da nossa família!</p>
    </div>
    <div class="container" >
     <div class="content-about"><h1 class="h1-about">MISSÃO</h1></div>
-    <p class="content-about2">Fundada em Setembro de 2007, a Stilo Academia desde sua inauguração se preocupa em trazer a saúde e a boa forma aos seus alunos, que contam com todo o suporte de profissionais bem preparados, além de estrutura e aparelhagem completa para o desenvolvimento de diversas práticas esportivas que você pode conferir no menu modalidades.</p>
+    <p class="content-about2">Na nossa academia, acreditamos que a saúde é o maior bem que podemos ter. Por isso, nossa missão é oferecer aos nossos alunos um ambiente seguro e motivador para que possam cuidar do corpo e da mente através da prática de exercícios físicos e atividades que promovam o bem-estar.</p>
     <div class="content-about"><h1 class="h1-about">VISÕES</h1></div>
-    <p class="content-about2">A academia conta com profissionais qualificados como: nutricionistas, fisioterapeutas e professores de educação física, aptos a atenderem pessoas de todas as idades que queiram praticar atividades físicas, tanto para fins estéticos, terapêuticos ou capacitadores.</p>
+    <p class="content-about2">Queremos ser reconhecidos como uma academia que oferece um ambiente acolhedor, onde nossos alunos se sintam motivados a treinar e a cuidar da sua saúde, em um espaço que ofereça conforto e segurança em todos os momentos.</p>
     <div class="content-about"><h1 class="h1-about">Métodos</h1></div>
-    <p class="content-about2">A Stilo Academia dispõe de uma ampla estrutura com equipamentos modernos e adequados a prática de exercícios físicos, que traz toda sua bagagem em treinamento e infraestrutura de alta qualidade.</p>
+    <p class="content-about2">A Bem + fit dispõe de uma ampla estrutura com equipamentos para a prática de exercícios físicos, que traz toda sua bagagem em treinamento e infraestrutura de alta qualidade.</p>
    </div>
     </main>
 </div>
