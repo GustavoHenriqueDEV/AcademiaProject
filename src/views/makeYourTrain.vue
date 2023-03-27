@@ -13,7 +13,7 @@
             <li><router-link class="router-link" to="/locationPage">Localização</router-link></li>
           </ul>
         </nav>
-      </div>
+      </div> 
     </header>
     <main>
       <div class="content-makeTrain">
@@ -23,25 +23,28 @@
       <div class="Select-container">
         <div class="theme">Objetivo:</div>
         <select v-model="objetivo" class="form-select" aria-label="Default select example">
-          <option value="Ganho de massa">Hipertrofia(Ganho de massa muscular)</option>
-          <option value="Perder peso">Perca de peso</option>
+          <option value="1">Hipertrofia(Ganho de massa muscular)</option>
+          <option value="2">Perca de peso</option>
         </select>
         <div class="theme">Peso:</div>
         <select v-model="peso" class="form-select" aria-label="Default select example">
           <option selected>Peso</option>
-          <option value="30">30kg - 40kg</option>
-          <option value="40">40kg - 50kg</option>
-          <option value="50">50kg - 60kg</option>
-          <option value="70">60kg - 70kg</option>
-          <option value="80">60kg - 80kg</option>
-          <option value="90">80kg - 100kg</option>
+          <option value="30"></option>
+          <option value="45">40kg - 50kg</option>
+          <option value="55">50kg - 60kg</option>
+          <option value="65">60kg - 70kg</option>
+          <option value="75">70kg - 80kg</option>
+          <option value="85">80kg - 90kg</option>
+          <option value="95">90kg - 100kg</option>
         </select>
       </div>
       <div class="btn-content">
         <button @click="proteinCalc()" class="btn-make">PREPARAR TREINO</button>
       </div>
       <div class="textarea-content">
-        <textarea v-model="result" readonly style="resize: none"></textarea>
+        <textarea v-model="result" readonly style="resize: none">
+        
+        </textarea>
       </div>
 
     </main>
@@ -52,31 +55,21 @@ export default {
   data() {
     return {
       objetivo: "",
-      peso: "20",
+      peso: "",
       result: ""
     }
   },
   methods: {
+  
     proteinCalc() {
-      this.result = this.peso * (0, 83)
-      console.log(this.result)
+     if (this.objetivo === "1"){
+      this.result = "Você precisa de um total de" + " " + (this.peso * (2,2).toFixed(2)) + " " + "proteinas diárias." + " " + "Lembre-se de que esta é apenas uma estimativa geral e pode haver variações dependendo de sua idade, sexo, nível de atividade física e objetivos específicos. É sempre recomendável consultar um profissional de saúde ou nutricionista para obter orientação personalizada sobre suas necessidades nutricionais."
+     }else{
+      this.result = "Você precisa de um total de" + " " + (this.peso * (1.6).toFixed(2)) + " " + "proteinas diárias." + " " + "Lembre-se de que esta é apenas uma estimativa geral e pode haver variações dependendo de sua idade, sexo, nível de atividade física e objetivos específicos. É sempre recomendável consultar um profissional de saúde ou nutricionista para obter orientação personalizada sobre suas necessidades nutricionais."
+
+     }
     }
   },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   /**  methods: {
      sendQuestion() {
@@ -227,6 +220,14 @@ export default {
 }
 
 
+.textarea-content textarea {
+  font-size: 2.3rem;
+}
+
+
+
+
+
 .textarea-content {
   display: flex;
   justify-content: center;
@@ -256,7 +257,7 @@ textarea {
   background-color: #3c3d46;
   color: white;
   outline: none;
-  font-size: 50Px;
+  font-size: 90px;
   text-align: justify;
 }
 
