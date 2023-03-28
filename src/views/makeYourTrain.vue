@@ -29,7 +29,7 @@
         <div class="theme">Peso:</div>
         <select v-model="peso" class="form-select" aria-label="Default select example">
           <option selected>Peso</option>
-          <option value="30"></option>
+          <option value="30">30kg - 40kg</option>
           <option value="45">40kg - 50kg</option>
           <option value="55">50kg - 60kg</option>
           <option value="65">60kg - 70kg</option>
@@ -65,7 +65,7 @@ export default {
      if (this.objetivo === "1"){
       this.result = "Você precisa de um total de" + " " + (this.peso * (2,2).toFixed(2)) + " " + "proteinas diárias." + " " + "Lembre-se de que esta é apenas uma estimativa geral e pode haver variações dependendo de sua idade, sexo, nível de atividade física e objetivos específicos. É sempre recomendável consultar um profissional de saúde ou nutricionista para obter orientação personalizada sobre suas necessidades nutricionais."
      }else{
-      this.result = "Você precisa de um total de" + " " + (this.peso * (1.6).toFixed(2)) + " " + "proteinas diárias." + " " + "Lembre-se de que esta é apenas uma estimativa geral e pode haver variações dependendo de sua idade, sexo, nível de atividade física e objetivos específicos. É sempre recomendável consultar um profissional de saúde ou nutricionista para obter orientação personalizada sobre suas necessidades nutricionais."
+      this.result = "Você precisa de um total de" + " " + (this.peso * (1.6).toFixed(2)) + " " + "proteinas diárias." + " " + "Lembre-se de que esta é apenas uma estimativa geral e pode haver variações dependendo de sua idade, sexo, nível de atividade física e objetivos específicos.É sempre recomendável consultar um profissional de saúde ou nutricionista para obter orientação personalizada sobre suas necessidades nutricionais."
 
      }
     }

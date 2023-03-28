@@ -61,7 +61,7 @@ export default {
       window.open("https://www.instagram.com/")
     },
     irwhat() {
-      window.open("https://www.https://api.whatsapp.com/send?phone=5547991248203.com/")
+      window.open("https://wa.me/554797212627?")
     }
 
   },

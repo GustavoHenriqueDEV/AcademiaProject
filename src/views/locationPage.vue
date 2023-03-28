@@ -26,6 +26,7 @@
   <hr>
    <section>
     <div class="location-content">
+      <button @click="goUp" class="upButton"  v-if="mostrarBotão">Subir</button>
       <div>Localização:</div>
       <div>Avenida Jaragua do Sul, 941 -Bal.Barra do sul - SC - 89247-000</div>
     </div>
@@ -35,12 +36,27 @@
 </template>
 <script>
 export default {
-  data() {
-    return {
-      
+  data(){
+    return{
+      mostrarBotão: false
     }
   },
-
+ methods: {
+    verTela(){
+      if(window.innerWidth < 600){
+        this.mostrarBotão = true
+      }
+    },
+    goUp(){
+      window.scrollTo({
+        top: 0,
+        behavior:'smooth'
+      })
+    }
+  },
+  mounted(){
+  this.verTela()
+},
 }
 </script>
 <style scoped>
@@ -53,6 +69,22 @@ main{
   display: flex;
   flex-direction: column;
 }
+
+.upButton{
+  border-radius: 20px;
+  border: none;
+  margin-left: 25%;
+  align-items: baseline;
+  display:flex;
+  justify-content: center; 
+  width: 50%;
+  height: 50%;
+  text-transform: uppercase;
+  color: yellow;
+  background-color: rgba(158, 156, 156, 0.527);;
+}
+
+
   iframe{
     margin-top: 4vh;
     border-radius: 20px;
