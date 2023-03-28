@@ -17,7 +17,7 @@
     </header>
     <main>
       <div class="content-makeTrain">
-        <h1 class="a">Calcule sua necessidade proteica!</h1>
+        <h1 class="a">Sua necessidade proteica!</h1>
       </div>
       <hr>
       <div class="Select-container">
@@ -132,9 +132,11 @@ export default {
 @media screen and (max-width: 600px) {
   .a {
     margin-top: 15px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
-
+  .content-makeTrain .a{
+    letter-spacing: 0.3rem;
+  }
   .btn-content {
     width: 60%;
     margin-left: 70px;
