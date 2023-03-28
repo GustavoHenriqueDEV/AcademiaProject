@@ -17,7 +17,7 @@
     </header>
     <main>
       <div class="content-makeTrain">
-        <h1 class="a">Prepare seu treino!</h1>
+        <h1 class="a">Calcule sua necessidade proteica!</h1>
       </div>
       <hr>
       <div class="Select-container">
@@ -39,7 +39,7 @@
         </select>
       </div>
       <div class="btn-content">
-        <button @click="proteinCalc()" class="btn-make">PREPARAR TREINO</button>
+        <button @click="proteinCalc()" class="btn-make">PREPARAR SHEIK</button>
       </div>
       <div class="textarea-content">
         <textarea v-model="result" readonly style="resize: none">

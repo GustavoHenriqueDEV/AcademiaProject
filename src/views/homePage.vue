@@ -23,7 +23,7 @@
         <h2 class="second-text">Junte-se a nós, veja os planos!</h2>
     <div class="btn-content1">
         <button class="btn-plano" @click="irPlano" >Planos</button>
-        <button class="btn-treino" @click="goMakeTrain" ><div class="btn-text">faça seu treino</div></button>
+        <button class="btn-treino" @click="goMakeTrain" ><div class="btn-text">Protein Calc</div></button>
     </div>
     </div>
    </main>
