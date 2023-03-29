@@ -39,7 +39,7 @@
         </select>
       </div>
       <div class="btn-content">
-        <button @click="proteinCalc()" class="btn-make">calcular</button>
+        <button @click="proteinCalc()" class="btn-make">CALCULAR</button>
       </div>
       <div class="textarea-content">
         <textarea v-model="result" readonly style="resize: none">
