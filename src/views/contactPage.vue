@@ -58,7 +58,7 @@ export default {
       window.open("https://www.facebook.com")
     },
     irInstagram() {
-      window.open("https://www.instagram.com/")
+      window.open("https://www.instagram.com/cristianejeancarlorosa/")
     },
     irwhat() {
       window.open("https://wa.me/554797212627?")
