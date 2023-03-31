@@ -55,7 +55,7 @@ export default {
   methods: {
 
     irFacebook() {
-      window.open("https://www.facebook.com")
+      window.open("https://www.facebook.com/profile.php?id=100068578227150")
     },
     irInstagram() {
       window.open("https://www.instagram.com/cristianejeancarlorosa/")
