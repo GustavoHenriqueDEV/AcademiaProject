@@ -18,7 +18,7 @@
   <div class="location-text">Nossa academia!</div>
 
   <div class="container-iframe">
-    <iframe src="https://www.google.com/maps/embed?pb=!4v1673969139685!6m8!1m7!1s8xbR638SHH19pCiOsaXQQA!2m2!1d-26.45186504002438!2d-48.61960932334976!3f196.1789840844788!4f10.083361774138694!5f0.7820865974627469" width="600" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!4v1681152092320!6m8!1m7!1sCAoSLEFGMVFpcE9aTmV3N2RyNWdQMnFqck5EWW8wZ1VIYUdsNVQ3VFdpQWI1S3Bu!2m2!1d-26.4609341!2d-48.60879360000001!3f356.2452772815102!4f3.040444642815345!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <div>
   </div>
   </div> 

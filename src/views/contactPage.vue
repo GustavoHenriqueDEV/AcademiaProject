@@ -55,13 +55,13 @@ export default {
   methods: {
 
     irFacebook() {
-      window.open("https://www.facebook.com/profile.php?id=100068578227150")
+      window.open("https://www.facebook.com/")
     },
     irInstagram() {
-      window.open("https://www.instagram.com/cristianejeancarlorosa/")
+      window.open("https://www.instagram.com/")
     },
     irwhat() {
-      window.open("https://wa.me/554797212627?")
+      window.open("https://wa.me/5547992005977")
     }
 
   },

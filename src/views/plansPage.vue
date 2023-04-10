@@ -28,7 +28,7 @@
     </div>
 
     <div class="col-plans col">
-      <img class="img-plans" src="../assets/3xSemana.png" alt="">  
+      <img class="img-plans" src="../assets/3xSemana.jpg" alt="">  
     </div>
 
     <div class="col-plans col">
